@@ -1,0 +1,19 @@
+<div class="container mt-5">
+  <form id="registration" [formGroup]="formFields" (ngSubmit)="onSubmit()">
+    <ul>
+      <li>
+        <input type="text" placeholder="Username" name="name" required formControlName="name"/>
+      </li>
+      <li>
+        <input type="password" placeholder="Password" name="password" required formControlName="password"/>
+      </li>
+      <li>
+        <input type="email" placeholder="Email" name="email" required formControlName="email"/>
+      </li>
+      <li>
+        <button  type="submit"  class="button" >Registration</button>
+      </li>
+    </ul>
+  </form>
+</div>
+

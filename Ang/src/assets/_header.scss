@@ -1,0 +1,147 @@
+header{
+  position: absolute;
+  width: 100%;
+  z-index: 20;
+}
+.nav-item.active{
+
+  @include media-breakpoint-up(lg) {
+    font-weight: bold;
+
+    .nav-link{
+      position: relative;
+
+      &::before{
+        position: absolute;
+        content: '';
+        top: 0;
+        border-top: 6px solid $primary;
+        left: calc(#{$nav-link-padding-x} / 2);
+        right: calc(#{$nav-link-padding-x} / 2);
+      }
+    }
+  }
+}
+
+.nav-link{
+  transition: background-color .4s;
+}
+
+.nav-item{
+  border-bottom: 2px solid $black;
+
+  &:hover{
+
+    .nav-link{
+      background-color: $success;
+    }
+  }
+
+  @include media-breakpoint-up(lg){
+    border-bottom: none;
+
+    &:hover {
+
+      .nav-link {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.navbar{
+  z-index: 10;
+}
+
+.navbar-toggler{
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.nav-position{
+  position: absolute;
+  top: 100%;
+  left: -15px;
+  right: -15px;
+  text-align: center;
+  background-color: rgba($primary, .4);
+  padding: 0 15px;
+
+  @include media-breakpoint-up(lg){
+    position: relative;
+    margin-top: 0;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
+.logo{
+  z-index: 10;
+
+  @include media-breakpoint-up(lg){
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.navbar-collapse.collapse{
+  order: 2;
+
+  @include media-breakpoint-up(lg){
+    order: 1;
+  }
+}
+
+.search-form{
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+
+  input{
+    border-radius: 20px;
+    background-color: rgba($white, .7);
+    padding: 5px 30px 5px 15px;
+    position: relative;
+    color: $black;
+    z-index: 5;
+    &:focus{
+      background-color: rgba($white, .9);
+    }
+
+
+    &:after{
+      position: absolute;
+      content: "\e907";
+      font-family: 'icomoon';
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+    }
+  }
+
+  .search-btn{
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    background-color: transparent;
+    border: none;
+    z-index: 55;
+    transform: translateY(-50%);
+    padding: 0;
+
+    &:focus{
+      outline: none;
+    }
+  }
+
+  span{
+    font-size: 20px;
+    vertical-align: middle;
+    color: $secondary;
+  }
+}

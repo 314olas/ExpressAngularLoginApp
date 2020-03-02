@@ -1,0 +1,184 @@
+//@font-face {
+//  font-family: 'Proxima Nova Lt';
+//  src: url('fonts/proxima/ProximaNova-LightIt.eot');
+//  src: local('fonts/proxima/Proxima Nova Light Italic'), local('ProximaNova-LightIt'),
+//  url('fonts/proxima/ProximaNova-LightIt.eot?#iefix') format('embedded-opentype'),
+//  url('fonts/proxima/ProximaNova-LightIt.woff') format('woff'),
+//  url('fonts/proxima/ProximaNova-LightIt.ttf') format('truetype');
+//  font-weight: 300;
+//  font-style: italic;
+//}
+//
+//@font-face {
+//  font-family: 'Proxima Nova Rg';
+//  src: url('fonts/proxima/ProximaNova-RegularIt.eot');
+//  src: local('Proxima Nova Regular Italic'), local('ProximaNova-RegularIt'),
+//  url('fonts/proxima/ProximaNova-RegularIt.eot?#iefix') format('embedded-opentype'),
+//  url('fonts/proxima/ProximaNova-RegularIt.woff') format('woff'),
+//  url('fonts/proxima/ProximaNova-RegularIt.ttf') format('truetype');
+//  font-weight: normal;
+//  font-style: italic;
+//}
+//
+//$font-family-base: "Proxima Nova Rg";
+//
+//$montserrat: 'Montserrat', sans-serif;
+//
+//
+//$headings-font-family: $montserrat;
+//$input-btn-font-family: 'Proxima Nova Lt';
+
+
+$white:    #fff !default;
+$gray-100: #f2f1f1; //bg (happy client)
+
+$gray-200: #ddd;//about us (headings)
+$gray-300: #ccc;//about us (paragraphs)
+
+$gray-400: #b7b3b3; //text lighten
+$gray-500: #828181; //most of text color
+$gray-600: #444;
+
+$gray-btn-bg: #dddcdc;
+$gray-btn-color:  #a59d9d;
+
+//footer colors
+$gray-700: #333;  //bg info
+$gray-800: #222;
+$gray-900: #101010;
+$black: #111;
+
+$grays: map-merge(
+    $grays,
+    (
+      "100": $gray-100,
+      "200": $gray-200,
+      "300": $gray-300,
+      "400": $gray-400,
+      "500": $gray-500,
+      "600": $gray-600,
+      "700": $gray-700,
+      "800": $gray-800,
+      "900": $gray-900
+    )
+);
+
+$blue: #0061ff; //bg for 'Be'
+$blue-light: #089dea; //bg for footer
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e8538c;  //for social ball
+$red:     #dc3545 !default;
+$orange:  #f34d04;
+$yellow:  #ffba00;
+$green: #54d154;
+$teal:    #20c997 !default;
+$cyan: #00aced; //bg for twitter
+
+
+
+$green-light: #e1f3e1;
+$green-lighten: #3eba3e;
+$green-darker: #2b9b2b;
+$green-dark: #207b20;
+$white-gray: #e6e7e6;
+
+$slick-arrows-color: #e0dfdf;
+
+
+$footer-bg-meet-team: $green-lighten;
+
+$info-bg: $gray-700;
+$info-heading-color: $gray-200;
+$info-paragraph-color: $gray-300;
+
+$primary: $green;
+$primary-dark: $green-dark;
+
+$social-green-bg-color: #c5e9c5;
+$social-bg-light: $white-gray;
+
+$facebook-bg-color: #1d53aa;
+
+$form-input-color: #777;
+
+$cite-img-holder-border: #e1e1e1;
+
+$secondary:     $gray-500;
+$success:       $green-darker;
+$info:          $cyan;
+$warning:       $yellow !default;
+$danger:        $orange;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+
+
+$theme-colors: map-merge(
+    $theme-colors,
+    (
+      "primary":    $primary,
+      "secondary":  $secondary,
+      "success":    $success,
+      "info":       $info,
+      "warning":    $warning,
+      "danger":     $danger,
+      "light":      $light,
+      "dark":       $dark
+    )
+);
+
+
+
+$yiq-text-dark:             $gray-500;
+
+$body-color:                $gray-500;
+
+// Links
+//
+// Style anchor elements.
+
+$link-color: $white;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: none;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom:   1rem !default;
+
+$container-max-widths: map-merge(
+    $container-max-widths,
+    (
+      sm: 540px,
+      md: 720px,
+      lg: 960px,
+      xl: 1170px
+    )
+);
+
+$h1-font-size: 41px;
+$h2-font-size: 24px;
+$h3-font-size: 21px;
+$h4-font-size: 16px;
+
+
+$navbar-dark-color: $link-color;
+$navbar-dark-toggler-border-color: $primary;
+$navbar-dark-hover-color: $link-color;
+$navbar-dark-color: $link-color;
+
+$border-radius: 20px;
+
+$btn-font-size-lg: 22px;
+
+
+$btn-border-radius:$border-radius;
+$btn-border-radius-lg: $border-radius * 2;
+$btn-border-radius-sm: $border-radius;
+$btn-padding-x-sm: 20px;
+$btn-padding-x-lg:  20px;
+$btn-font-size-sm: 16px;
+
+$card-border-width: 0;

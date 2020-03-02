@@ -1,0 +1,46 @@
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" routerLink="/"><img src="../../assets/img/mad-login-img.png" alt="Login App logo"></a>
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            (click)="showList()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class=" navbar-collapse" [class.collapse]="collapse" id="navbarSupportedContent" >
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"  >
+          <a class="nav-link"
+             routerLink="/home"
+             routerLinkActive="active"
+             [routerLinkActiveOptions]="{exact:true}"
+          >Home</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+        </li>
+        <li class="nav-item"  >
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active" >Contact us</a>
+        </li>
+        <li class="nav-item"  >
+          <a class="nav-link" routerLink="/profile" routerLinkActive="active" *ngIf="isLogIn">Profile</a>
+        </li>
+      </ul>
+      <ng-container *ngIf="!isLogIn; else logoutBtn">
+        <a class="btn btn-success my-2 my-lg-0" routerLink="/login" (click)="showList()">login</a>
+      </ng-container>
+      <ng-template  #logoutBtn>
+        <a class="btn btn-success my-2 my-lg-0"
+           (click)="logOut()" >log out</a>
+      </ng-template>
+
+    </div>
+  </nav>
+</header>
+
+
+

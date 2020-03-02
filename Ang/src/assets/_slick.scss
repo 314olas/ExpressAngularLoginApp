@@ -1,0 +1,39 @@
+.slick-prev,
+.slick-next{
+
+  &:before{
+    font-size: 0 !important;
+    position: absolute;
+    content: '';
+    width:100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-right: 5px solid $slick-arrows-color;
+    border-top: 5px solid $slick-arrows-color;
+  }
+}
+
+.slick-prev{
+  left: -80px;
+
+  &:before{
+    transform: rotate(-135deg);
+  }
+}
+
+.slick-next{
+  right: -80px;
+
+  &:before{
+    transform: rotate(45deg);
+  }
+}
+
+.slick-slide{
+  outline: none;
+
+  q{
+    font-weight: bold;
+  }
+}

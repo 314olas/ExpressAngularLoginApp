@@ -1,0 +1,13 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-5 mx-auto">
+      <ul>
+        <li *ngFor="let key of userProfileKeys">
+          <h2>User {{key}}:</h2>
+          <p>{{userProfile[key]}} </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

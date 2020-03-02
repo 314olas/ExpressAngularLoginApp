@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <div id="logger" class="form-action show">
+        <h1>Login on webapp</h1>
+        <h2>
+         You need to login to use this App
+        </h2>
+        <form [formGroup]="formFields" (ngSubmit)="onSubmit()" >
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Enter email" formControlName="email" required>
+            <ng-container *ngIf="formFields.controls.email.errors && formFields.controls.email.touched">
+              <span *ngIf="formFields.controls.email.errors.domain">wrong email</span>
+            </ng-container>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control"  placeholder="Password" formControlName="password" required>
+          </div>
+          <div class="form-group d-flex justify-content-between">
+            <a href="/resetpassword/step1">forgot a password?</a>
+            <a href="/registration">create an account?</a>
+          </div>
+          <button type="submit" class="btn btn-primary" [disabled]="!formFields.valid" >Login</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
